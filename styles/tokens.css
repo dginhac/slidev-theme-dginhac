@@ -1,0 +1,87 @@
+:root {
+    /*
+   * DGINHAC / Slidev palette
+   * Academic, digital, but more vivid than the sober blue/green version.
+   * Deep navy surfaces + dynamic blue + teal + controlled coral accent.
+   */
+
+    --br-primary-rgb: 59 130 246; /* #3B82F6 - dynamic blue */
+    --br-secondary-rgb: 20 184 166; /* #14B8A6 - modern teal */
+    --br-accent-rgb: 244 63 94; /* #F43F5E - controlled coral */
+
+    --br-primary: rgb(var(--br-primary-rgb));
+    --br-secondary: rgb(var(--br-secondary-rgb));
+    --br-accent: rgb(var(--br-accent-rgb));
+
+    --br-primary-soft: rgb(var(--br-primary-rgb) / 0.15);
+    --br-primary-ring: rgb(var(--br-primary-rgb) / 0.4);
+
+    --br-secondary-soft: rgb(var(--br-secondary-rgb) / 0.14);
+    --br-secondary-ring: rgb(var(--br-secondary-rgb) / 0.36);
+
+    --br-accent-soft: rgb(var(--br-accent-rgb) / 0.13);
+    --br-accent-ring: rgb(var(--br-accent-rgb) / 0.34);
+
+    --br-black: #000000;
+
+    /*
+   * Dark mode surfaces.
+   */
+    --br-surface: var(--slidev-theme-surface, #0f172a);
+    --br-surface-elev: var(--slidev-theme-surface-elev, #111827);
+    --br-border: #1f2937;
+
+    --br-muted: rgba(226, 232, 240, 0.6);
+    --br-faint: rgba(226, 232, 240, 0.08);
+
+    --br-fg: #e5e7eb;
+    --br-fg-heading: #f9fafb;
+    --br-fg-subtle: rgba(229, 231, 235, 0.78);
+
+    /*
+   * Text colors on solid brand backgrounds.
+   */
+    --br-on-primary: #ffffff;
+    --br-on-secondary: #042f2e;
+    --br-on-accent: #ffffff;
+
+    --slidev-theme-primary: var(--br-primary);
+    --slidev-theme-secondary: var(--br-secondary);
+    --slidev-theme-accent: var(--br-accent);
+}
+
+html.dark,
+.dark {
+    --slidev-code-background: #020617;
+    --slidev-code-foreground: #e5e7eb;
+}
+
+html:not(.dark) {
+    /*
+   * Light mode surfaces.
+   */
+    --br-surface: var(--slidev-theme-surface-light, #fbfcff);
+    --br-surface-elev: var(--slidev-theme-surface-elev-light, #ffffff);
+    --br-border: #e5eaf0;
+
+    --br-muted: rgba(31, 41, 55, 0.6);
+    --br-faint: rgba(15, 23, 42, 0.06);
+
+    --br-fg: #1f2937;
+    --br-fg-heading: #0f172a;
+    --br-fg-subtle: rgba(31, 41, 55, 0.78);
+
+    /*
+   * Darker variants for readability on light backgrounds.
+   */
+    --br-primary-rgb: 37 99 235; /* #2563EB */
+    --br-secondary-rgb: 13 148 136; /* #0D9488 */
+    --br-accent-rgb: 225 29 72; /* #E11D48 */
+
+    --br-on-primary: #ffffff;
+    --br-on-secondary: #ffffff;
+    --br-on-accent: #ffffff;
+
+    --slidev-code-background: #f3f6fa;
+    --slidev-code-foreground: #111827;
+}

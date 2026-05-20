@@ -1,0 +1,75 @@
+{
+  "name": "slidev-theme-dginhac",
+  "version": "0.1.0",
+  "description": "A personal academic Slidev theme based on Seriph and BrokenRubik with custom components and styles.",
+  "type": "module",
+  "keywords": [
+    "slidev-theme",
+    "slidev",
+    "academic",
+    "presentation"
+  ],
+  "license": "MIT",
+  "files": [
+    "components",
+    "layouts",
+    "styles",
+    "setup",
+    "uno.config.ts"
+  ],
+  "scripts": {
+    "dev": "slidev example.md",
+    "build": "slidev build example.md",
+    "export": "slidev export example.md"
+  },
+  "devDependencies": {
+    "@slidev/cli": "latest",
+    "@slidev/client": "^52.15.2",
+    "@slidev/theme-seriph": "latest",
+    "@slidev/types": "^52.15.2",
+    "vue": "latest"
+  },
+  "slidev": {
+    "defaults": {
+      "transition": "fade",
+      "aspectRatio": "16/9",
+      "canvasWidth": 980,
+      "colorSchema": "light",
+      "themeConfig": {
+        "primary": "#3B82F6",
+        "secondary": "#14B8A6",
+        "accent": "#F43F5E",
+        "surface": "#0F172A",
+        "surface-elev": "#111827"
+      },
+      "drawings": {
+        "persist": false
+      },
+      "fonts": {
+        "sans": "Aspekta",
+        "mono": "JetBrains Mono Variable",
+        "local": "Aspekta"
+      }
+    },
+    "aliases": {
+      "layouts": {
+        "cover": "./layouts/cover.vue",
+        "intro": "./layouts/intro.vue",
+        "section": "./layouts/section.vue",
+        "statement": "./layouts/statement.vue",
+        "fact": "./layouts/fact.vue",
+        "quote": "./layouts/quote.vue",
+        "end": "./layouts/end.vue",
+        "three-cols": "./layouts/three-cols.vue",
+        "three-cols-header": "./layouts/three-cols-header.vue"
+      }
+    },
+    "highlighter": "shiki"
+  },
+  "engines": {
+    "slidev": ">=0.52.0"
+  },
+  "dependencies": {
+    "@fontsource-variable/jetbrains-mono": "^5.2.8"
+  }
+}
