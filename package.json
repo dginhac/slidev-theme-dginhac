@@ -34,7 +34,7 @@
       "transition": "fade",
       "aspectRatio": "16/9",
       "canvasWidth": 980,
-      "colorSchema": "light",
+      "colorSchema": "both",
       "themeConfig": {
         "primary": "#3B82F6",
         "secondary": "#14B8A6",
