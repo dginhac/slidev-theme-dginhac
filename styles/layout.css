@@ -79,7 +79,7 @@
 
     ul li::marker,
     ol li::marker {
-        color: var(--br-primary);
+        color: var(--br-secondary);
     }
 
     table {
