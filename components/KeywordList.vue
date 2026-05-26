@@ -10,7 +10,13 @@ withDefaults(
         imageAlt?: string;
         imageWidth?: string;
     }>(),
-    { size: "2xl", gap: 16, rowGap: "0.375rem", imageAlt: "", imageWidth: "40%" },
+    {
+        size: "2xl",
+        gap: 12,
+        rowGap: "0.375rem",
+        imageAlt: "",
+        imageWidth: "33%",
+    },
 );
 
 const listRef = ref<HTMLElement>();
@@ -44,7 +50,12 @@ onUnmounted(() => observer?.disconnect());
             <slot />
         </div>
         <div v-if="image" :style="`width: ${imageWidth}`" class="image-wrapper">
-            <img ref="imageRef" :src="image" :alt="imageAlt" class="keyword-image" />
+            <img
+                ref="imageRef"
+                :src="image"
+                :alt="imageAlt"
+                class="keyword-image"
+            />
         </div>
     </div>
 </template>
@@ -53,14 +64,14 @@ onUnmounted(() => observer?.disconnect());
 .keyword-wrapper {
     display: flex;
     align-items: center;
-    gap: 2rem;
+    gap: 1rem;
 }
 .keyword-list {
     display: grid;
     grid-template-columns: max-content 1fr;
     align-items: baseline;
     padding-left: 1.5rem;
-    margin-top: 4rem;
+    margin-top: 2rem;
     margin-bottom: 1rem;
     flex: 1;
 }

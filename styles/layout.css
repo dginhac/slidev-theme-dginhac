@@ -63,8 +63,8 @@
     }
 
     strong {
-        color: var(--br-fg-heading);
-        font-weight: 600;
+        color: var(--br-accent);
+        font-weight: 500;
     }
 
     a {

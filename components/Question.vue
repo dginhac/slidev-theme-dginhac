@@ -8,8 +8,10 @@ const props = withDefaults(
         color?: "primary" | "secondary" | "accent";
         italicHighlight?: boolean;
         size?: "xl" | "2xl" | "3xl" | "4xl";
+        py?: number;
+        mt?: number;
     }>(),
-    { color: "primary", italicHighlight: true, size: "3xl" },
+    { color: "primary", italicHighlight: true, size: "3xl", py: 2, mt: 4 },
 );
 
 const segments = computed(() => {
@@ -36,8 +38,7 @@ const segments = computed(() => {
 </script>
 
 <template>
-    <div class="question py-4">
-        <div class="question-rule" />
+    <div class="question" :class="[`py-${py}`, `mt-${mt}`]">
         <p :class="`text-${size}`">
             <span
                 v-for="(seg, i) in segments"
@@ -56,13 +57,16 @@ const segments = computed(() => {
 <style scoped>
 .question {
     font-weight: 500;
-    line-height: 1.4;
     color: var(--br-fg-heading);
 }
+
+.question p {
+    line-height: 1.25;
+}
 .question-rule {
-    width: 3rem;
+    width: 5rem;
     height: 2px;
     background-color: var(--br-border);
-    margin: 0 auto 1.25rem;
+    margin: 2rem auto 1.25rem;
 }
 </style>

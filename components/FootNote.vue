@@ -7,7 +7,7 @@
 <style scoped>
 .footnote {
     position: absolute;
-    bottom: 2.5rem;
+    bottom: 1.5rem;
     left: 3.5rem;
     right: 3.5rem;
     padding-top: 0.5rem;
