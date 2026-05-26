@@ -25,6 +25,10 @@ export default defineConfig({
     "text-7xl",
     "text-8xl",
     "text-9xl",
+    "font-normal",
+    "font-medium",
+    "font-semibold",
+    "font-bold",
   ],
   theme: {
     colors: {

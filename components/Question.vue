@@ -38,7 +38,10 @@ const segments = computed(() => {
 </script>
 
 <template>
-    <div class="question" :class="[`py-${py}`, `mt-${mt}`]">
+    <div
+        class="question"
+        :style="{ paddingTop: `${py * 0.25}rem`, paddingBottom: `${py * 0.25}rem`, marginTop: `${mt * 0.25}rem` }"
+    >
         <p :class="`text-${size}`">
             <span
                 v-for="(seg, i) in segments"
