@@ -12,6 +12,20 @@ import { defineConfig } from "unocss";
  * regardless of mode — e.g. a brand-fill CTA on a colored surface.
  */
 export default defineConfig({
+  safelist: [
+    "text-sm",
+    "text-base",
+    "text-lg",
+    "text-xl",
+    "text-2xl",
+    "text-3xl",
+    "text-4xl",
+    "text-5xl",
+    "text-6xl",
+    "text-7xl",
+    "text-8xl",
+    "text-9xl",
+  ],
   theme: {
     colors: {
       primary: "rgb(var(--br-primary-rgb) / <alpha-value>)",
@@ -36,7 +50,7 @@ export default defineConfig({
   },
   shortcuts: {
     "br-eyebrow":
-      "text-primary text-sm font-semibold uppercase tracking-widest",
+      "text-primary font-semibold uppercase tracking-widest",
     "br-caption": "text-brand-muted text-sm",
     "br-ring-primary": "ring-1 ring-primary/35 bg-primary/10",
     "br-ring-secondary": "ring-1 ring-secondary/30 bg-secondary/8",
