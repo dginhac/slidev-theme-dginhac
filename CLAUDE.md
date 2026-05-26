@@ -49,6 +49,8 @@ Shortcuts: `br-eyebrow`, `br-caption`, `br-ring-primary`, `br-ring-secondary`, `
 
 Vivid variants (full saturation, mode-invariant): `text-primary-vivid`, `bg-secondary-vivid`, `text-accent-vivid`.
 
+Safelist: text sizes `text-sm` through `text-9xl` and font weights `font-normal`, `font-medium`, `font-semibold`, `font-bold` are force-included so dynamic class bindings (e.g. `` `text-${size}` ``, `` `font-${weight}` ``) work without static analysis. Spacing props (`mt`, `mb`, `py`) use inline styles instead of dynamic UnoCSS classes to avoid safelist explosion.
+
 ## Layouts
 
 All layouts use `class="slidev-layout <name>"`. Theme defaults: `transition: fade`, `16/9`, `canvasWidth: 980`.
@@ -74,12 +76,15 @@ Auto-imported — use directly in slide markdown.
 
 | Component | Props | Behavior |
 |---|---|---|
-| `Callout` | `type` (primary\|secondary\|accent) | Highlighted box with left border |
+| `Callout` | `type` (primary\|secondary\|accent) | Highlighted box with left border and tinted background |
 | `Card` | `type` (primary\|secondary\|accent\|muted), `title?` | Padded card, `height: 100%` for grid alignment |
 | `Checklist` | — | Wraps `<ul>` with styled checkbox marks (primary border + secondary check) |
 | `Compare` | `leftLabel?`, `rightLabel?`, `leftColor?`, `rightColor?` | Two-column split with divider; slots: `left`, `right` |
+| `FootNote` | — | Absolute-positioned footnote pinned to slide bottom; separated by a border-top line |
 | `Pros` | `title?` | Green-tinted box, list items get ✓ in secondary color |
 | `Cons` | `title?` | Red-tinted box, list items get ✕ in accent color |
+| `Question` | `text`, `highlight?` (string\|string[]), `color` (primary\|secondary\|accent), `italicHighlight?`, `size` (xl\|2xl\|3xl\|4xl), `py?`, `mt?` | Large question with optional word highlighting in brand color |
+| `KeywordList` | `size` (lg\|xl\|2xl\|3xl\|4xl), `gap?`, `rowGap?`, `image?`, `imageAlt?`, `imageWidth?` | Two-column grid of `<Keyword>` items; optional side image constrained to list height |
 | `Step` | `n?`, `color` (primary\|secondary\|accent) | Numbered bullet + body text; stack multiple for a process |
 | `Timeline` | — | Container with vertical gradient line on the left |
 | `TimelineItem` | — | Individual item inside `<Timeline>` |
@@ -95,8 +100,11 @@ Auto-imported — use directly in slide markdown.
 
 | Component | Props | Notes |
 |---|---|---|
+| `Eyebrow` | `color` (primary\|secondary\|accent), `fontsize` (xl\|2xl\|3xl\|4xl\|5xl\|6xl) | Small uppercase label; font-weight 600, wide letter-spacing |
+| `Keyword` | `word`, `color` (primary\|secondary\|accent), `weight` (normal\|medium\|semibold\|bold) | Inline term + muted complement text; use inside `<KeywordList>` |
+| `Message` | `color` (primary\|secondary\|accent), `size` (sm\|base\|lg\|xl\|2xl\|3xl), `weight` (normal\|medium\|semibold\|bold), `mt?`, `mb?` | Highlighted inline message — no border or background; stands out via color and weight |
 | `Pill` | `color` (primary\|secondary\|accent\|muted) | Inline badge/tag |
-| `Eyebrow` | — | Small uppercase label in primary color |
+| `Title` | — | Large bold heading block (`text-4xl`, heading color) |
 | `Kbd` | — | Keyboard shortcut display |
 | `DotItem` | — | Dot-prefixed list item |
 | `Plan` | — | Plan/roadmap card |
